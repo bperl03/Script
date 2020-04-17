@@ -1,1 +1,0 @@
-import urllib2def cook(host):    request = urllib2.Request(host)    response = urllib2.urlopen(request)    cookies = response.info()['Set-Cookie']    content = response.read()    response.close()    print(cookies, content)cook('http://www.google.com')
